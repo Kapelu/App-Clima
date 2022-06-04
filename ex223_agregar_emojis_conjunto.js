@@ -26,4 +26,5 @@ console.log(animales.has(gato));
 
 animales.clear();
 
+console.log(animales)
 console.log(animales.size);

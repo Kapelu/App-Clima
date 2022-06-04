@@ -33,3 +33,8 @@ console.log(generador.next());
 console.log(generador.next());
 console.log(generador.next());
 console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());

@@ -23,4 +23,3 @@ numeros.delete(4);
 
 console.log(numeros);
 console.log(numeros.size);
-(
