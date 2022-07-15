@@ -1,1 +1,0 @@
- Javascript classic algorithms
