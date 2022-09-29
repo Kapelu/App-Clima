@@ -1,25 +1,26 @@
 /*
-CallBack: Es pasar una funcion como parametro. callback, no es una palabra reservada, pero se le llama asi xq representa una llamada hacia otra funcion
+? CallBack
+Una función de callback es una función que se pasa a otra función como un argumento, y se ejecuta despues que se haya completado alguna rutina o acción. CallBack es una forma de asegurarnos de que un determinado codigo no se ejecuta hasta que otro codigo haya terminado de ejecutarse.
+https://www.youtube.com/watch?v=zQVnDW8SaA0
 */
-
-const operation=(numerol,numero2,callback) =>{
- return callback(numerol,numero2)
+function cache(callBack) {
+	setTimeout(function () {
+		console.log('Se ejecuta Primero')  //Se ejecuta Primero (despues de 3 segundo)
+		callBack()
+	}, 3000)
 }
-console.log(operation(1, 3, (a, b) => a + b))
-console.log(operation(1, 3, (a, b) => a * b))
-console.log(operation(1, 3, (a, b) => a - b))
-
-/*
-Usando CallBack de forma Asyncrona
-*/
-
-const operation2 = (numero3, numero4, callback) => {
-      return setTimeout(() => {
-    callback(numero3,numero4)
-  },1000)
+function callBack() {
+		console.log('Se ejecuta Segundo')  //Se ejecuta Segundo (Justamente despues deprimero)
 }
+cache(callBack)
 
-console.log(operation(1, 3, (a, b) => a + b));
-console.log(operation(1, 3, (a, b) => a * b));
-console.log(operation(1, 3, (a, b) => a - b));
+// En JavaScript casi todo es un CallBack veamos un ejemplo
 
+const nombres = ['Martina', 'Thomas', 'Lucia']
+nombres.forEach(name=>{
+  console.log(nombres)
+})
+
+nombres.map((name) => {
+	console.log(nombres)
+})

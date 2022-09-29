@@ -40,7 +40,6 @@ console.log(contador())
 Crear la tabla dede multiplicar
 */
 
-
 function multiplicador(a){return (b)=> a * b}
 let  tablas= multiplicador(3)
 console.log(tablas(5));
