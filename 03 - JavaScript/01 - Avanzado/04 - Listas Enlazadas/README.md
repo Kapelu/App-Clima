@@ -4,7 +4,7 @@ Una lista enlazada es una estructura de datos lineal que se compone de elementos
 
 Esta estructura permite la inserción o eliminación de elementos desde cualquier posición en la secuencia durante la iteración. Las variantes más complejas agregan enlaces adicionales, permitiendo una eficiente inserción o eliminación desde referencias arbitrarias del elemento. Una desventaja de las listas lazadas es que el tiempo de acceso es lineal (y difícil de canalizar). Un acceso más rápido, como un acceso aleatorio, no es factible. Los arreglos tienen una mejor locazion en caché comparados con las listas lazadas.
 
-![](/Apuntes-Personales/imagenes/Lista-enlazada.png)
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada.png)
 
 Las listas enlazadas están compuestas por los siguientes elementos:
 
@@ -27,17 +27,17 @@ Aquí algunos tipos de listas enlazadas:
 ***Lista enlazada simple***: Lista enlazada en la que cada nodo contiene un único campo de enlace al elemento sucesor.
 <br>
 
-![](/Apuntes-Personales/imagenes/Lista-enlazada_simple.png)
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada_simple.png)
 
 ***Lista doblemente enlazadas***: Lista enlazada en la que cada nodo contiene doble vía de enlace, los nodos apuntan tanto al elemento sucesor como el antecesor.
 <br>
 
-![](/Apuntes-Personales/imagenes/Lista-enlazada_doble.png)
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada_doble.png)
 
 ***Lista enlazada circular***: Semejante a la lista enlazada simple, con la distinción que el último nodo apunta hacía el primer nodo de la lista.
 <br>
 
-![](/Apuntes-Personales/imagenes/Lista-enlazada_circular.png)
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada_circular.png)
 <p>
 <br>
 
