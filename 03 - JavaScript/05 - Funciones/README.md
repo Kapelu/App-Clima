@@ -1,3 +1,12 @@
+```javascript
+const Kapelu = {
+     name: 'Daniel Calderon',
+     code: ['Javascript', 'HTML', 'CSS', 'NodeJS'],
+    tools: ['Visual Studio Code','GitBash', 'GitHub'],
+   github: 'https://github.com/Kapelu'
+}
+```
+
 <h1 align="center">FUNCIONES</h1>
 
 Las funciones nos permiten agrupar líneas de código en tareas con un nombre, para que, posteriormente, podamos hacer referencia a ese nombre para realizar todo lo que se agrupe en dicha tarea. Para usar funciones hay que hacer 2 cosas:

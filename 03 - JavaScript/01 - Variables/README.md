@@ -1,6 +1,6 @@
 ```javascript
 const Kapelu = {
-    name : 'Daniel Calderon',
+     name: 'Daniel Calderon',
      code: ['Javascript', 'HTML', 'CSS', 'NodeJS'],
     tools: ['Visual Studio Code','GitBash', 'GitHub'],
    github: 'https://github.com/Kapelu'
@@ -60,7 +60,7 @@ function saludo1() {
 }
 saludo1()
 ```
-Esto es porque la variable nomre1 tiene alcance de función. Es decir, solo esta disponible dentro de la función de la cuál fue creada. Al ejecutar `console.log()`dentro de las funcion si nos va a devolver lo que contiene nombre1, pero si lo hacemos desde fuera de la funcion nos va a decir que nombre1 no esta definido y nos devolvera un error.
+Esto es porque la variable nombre1 tiene alcance de función. Es decir, solo esta disponible dentro de la función de la cuál fue creada. Al ejecutar `console.log()`dentro de las funcion si nos va a devolver lo que contiene nombre1, pero si lo hacemos desde fuera de la funcion nos va a decir que nombre1 no esta definido y nos devolvera un error.
 
 >NOTA: Las variables con alcance de función son útiles a los programadores porque frecuentemente queremos crear variables que sólo sirvan o sean necesarias dentro de cierta función. Crear variables globales también nos puede generar errores o fallos.
 
@@ -85,10 +85,3 @@ console.log(`${edad}`)   // edad is not defined (edad no esta definida)
 * Reglas al declarar nombres de variables en JavaScript
 * Cuales son los tipos de datos que se le pueden asignar a las variables
 * Tareita de investigar como se usar `${}` al llamar una variable y en que caso se puede usar. 
-    
-<br/>
-<br/>
-<br/>
-<h1 align="center"></h1>
-<h3 align="left">by Kapelu
-<h1 align="center"></h1>

@@ -1,6 +1,6 @@
 ```javascript
 const Kapelu = {
-    name : 'Daniel Calderon',
+     name: 'Daniel Calderon',
      code: ['Javascript', 'HTML', 'CSS', 'NodeJS'],
     tools: ['Visual Studio Code','GitBash', 'GitHub'],
    github: 'https://github.com/Kapelu'
