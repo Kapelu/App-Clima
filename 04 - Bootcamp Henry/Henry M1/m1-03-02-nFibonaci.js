@@ -6,11 +6,9 @@
 */
 
 function nFibonacci(n) {
-    let fibonacci =
-    n === 0 || n === 1 ? n : nFibonacci(n - 1) + nFibonacci(n - 2);
-    return fibonacci;
+    return n === 0 || n === 1 ? n : (n - 1) + (n - 2)
 }
-console.log(nFibonacci(7));
+console.log(nFibonacci(8));
 
 
 
