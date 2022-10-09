@@ -22,48 +22,10 @@ let numeros = [1, 3, 5, 7, 9]//---> Estos serian los elementos separados por un 
 let numeros = [0] undefined  // cero no existe
 ```
 
-<h1 align="center"></h1>
-<h2 align="center">Metódos que para el manejo de array</h2>
-<h1 align="center"></h1>
+***Veamos como es el manejo de un array con ejemplos:***
 
->***`.lenght`:*** La propiedad length de un objeto que es una instancia de tipo Array establece o devuelve la cantidad de elementos en esa matriz. El valor es un entero sin signo de 32 bits que siempre es numéricamente mayor que el índice más alto en la matriz.
+[Click aqui](https://editormarkdown.com)
 
-```javascript
-let frutas = ['manzana', 'banana', 'sandia', 'naranja']
-
-console.log(frutas.length)  // 4
-```
-
-
-
-
-
-
-```javascript
-// Declaración de la función "saludar"
-function saludar() {
-  // Contenido de la función
-  console.log("Hola, soy una función")
-}
-``````javascript
-// Declaración de la función "saludar"
-function saludar() {
-  // Contenido de la función
-  console.log("Hola, soy una función")
-}
-``````javascript
-// Declaración de la función "saludar"
-function saludar() {
-  // Contenido de la función
-  console.log("Hola, soy una función")
-}
-``````javascript
-// Declaración de la función "saludar"
-function saludar() {
-  // Contenido de la función
-  console.log("Hola, soy una función")
-}
-```
 
 <br/>
 <br/>
