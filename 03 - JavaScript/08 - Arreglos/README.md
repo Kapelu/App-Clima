@@ -24,6 +24,8 @@ let numeros = [0] undefined  // cero no existe
 
 ***Veamos como es el manejo de un array con ejemplos :*** [:memo:](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/08%20-%20Arreglos/manejoDeArray.js)
 
+***Veamos con ejemplos algunos de los metodos para aplicar a un array :*** [:memo:](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/08%20-%20Arreglos/manejoDeArray.js)
+
 
 <br/>
 <br/>

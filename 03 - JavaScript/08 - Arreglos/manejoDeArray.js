@@ -1,34 +1,49 @@
 // Crear un array
-const autos = ['BMW', 'Volvo', 'Fiat', 'Ferrari', 'Ford']
-const nombre = ['Martina', 'Thomás', 'Lucia', 'Belen', 'Agustin', 'Tatiana']
-const numeros = [1, 2, 3, 6, 5, 4]
-const comidas = ['Desayunar', 'Almorzar', 'Comer', 'Merendar', 'Cenar']
+const nombre = ['Martina', 'Thomas', 'Lucia', 'Dario', 'Nilda', 'Octavio']
+console.log(nombre)
+console.log(Object.values(nombre))  // Object.values => Indica los valores dentro del array
+console.log(Object.keys(nombre))  // Object.keys => Indica el indice que ocupan esos valores
 
 // Acceder mediante su indice
-let primero = autos[0]
-let segundo = autos[2]
-let ultimo = autos[autos.length - 1]
+const primero = nombre[0]
+const segundo = nombre[2]
+const ultimo = nombre[nombre.length - 1]
 console.log(primero)
 console.log(segundo)
 console.log(ultimo)
 
 // Recorrer un array
 /* Usando for */
-for (let i = 0; i < numeros.length; i++) {
-	console.log(numeros[i])
+for (let i = 0; i < nombre.length; i++) {
+	console.log(nombre[i])
 }
 /* Usando forEach */
-comidas.forEach((comida, index) => {
-	console.log(`${index} : ${comida}`)
+nombre.forEach((nombre, index) => {
+	console.log(`${index} : ${nombre}`)
 })
 
 // Añadir elemento al final (.push)
-let añadirUltimo = autos.push('Scania')
-console.log(autos);
+const añadirUltimo = nombre.push('Natalia')
+console.log(nombre)
 
 // Eliminar ultimo elemento (.pop)
-let eliminarUltimo = autos.pop('Scania')
-console.log(autos);
+const eliminarUltimo = nombre.pop('Natalia')
+console.log(nombre)
 
+// Ingresar primer elemento (.unshift)
+const ingresarPrimero = nombre.unshift('Natalia')
+console.log(nombre)
 
+//Eliminar primer elemento (.shift)
+const eliminarPrimero = nombre.shift('Natalia')
+console.log(nombre)
+
+// Encontrar el indice de un elemento
+const encontrarElemento = nombre.indexOf('Thomas')
+console.log(encontrarElemento)
+
+// Eliminar un elemento mediante la posicion
+const sacarElemento = nombre.splice(3,5)
+console.log(sacarElemento);
+console.log(nombre)
 
