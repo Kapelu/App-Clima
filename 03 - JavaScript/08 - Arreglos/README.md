@@ -26,6 +26,10 @@ let numeros = [0] undefined  // cero no existe
 
 ***Veamos con ejemplos algunos de los metodos para aplicar a un array :*** [:memo:](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/08%20-%20Arreglos/metodosDeArray.js)
 
+<br>
+
+Podemos encontrar todos los metos de array aqui --> [:memo:](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 
 <br/>
 <br/>
