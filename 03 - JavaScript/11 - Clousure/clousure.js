@@ -1,23 +1,23 @@
 /*
 Retorna una funcion saludar
-*/ 
-function saludar(saludo) {return (nombre) => saludo + ' ' + nombre + ' !'}
+*/
+function saludar(saludo) {
+	return (nombre) => saludo + ' ' + nombre + ' !'
+}
 
-saludarHola = saludar('Hola');
+saludarHola = saludar('Hola')
 console.log(saludarHola('Kapelu'))
 
-function intro(nombre){
-  var saluda = `Soy ${nombre}`
-  return function(){
-    console.log(saluda)
-  }
+function intro(nombre) {
+	var saluda = `Soy ${nombre}`
+	return function () {
+		console.log(saluda)
+	}
 }
 
 let saludoKapelu = intro('Kapelu')
 
 console.log(saludoKapelu())
-
-
 
 //$ ********************************************************************/
 /*
@@ -27,22 +27,23 @@ newCounter(); // 1
 newCounter(); // 2
 */
 function counter(contador = 0) {
-  return () => (contador = contador + 1)
+	return () => (contador = contador + 1)
 }
 
 const contador = counter()
 console.log(contador())
 console.log(contador())
 
-
 //$ ********************************************************************/
 /*
 Crear la tabla dede multiplicar
 */
 
-function multiplicador(a){return (b)=> a * b}
-let  tablas= multiplicador(3)
-console.log(tablas(5));
+function multiplicador(a) {
+	return (b) => a * b
+}
+let tablas = multiplicador(3)
+console.log(tablas(5))
 
 //$ ********************************************************************/
 /*
@@ -54,7 +55,6 @@ function tablaDeMultiplicar(num, hasta){
 }
 tablaDeMultiplicar(7,10)
 */
-
 
 /*
 function multiplicador(num=0){
@@ -72,28 +72,19 @@ let tabla = multiplicador(2)
 console.log(tabla())
 */
 
-
-
 const miFuncion = () => {
-  let miValor = 2;
-  console.log(miValor);
+	let miValor = 2
+	console.log(miValor)
 
-  const funcionHija = () => {
-       console.log(miValor += 1);
-  }
+	const funcionHija = () => {
+		console.log((miValor += 1))
+	}
 
-  return funcionHija;
+	return funcionHija
 }
 
-const resultado = miFuncion();
-console.log(resultado);
-resultado();
-resultado();
-resultado();
-
-
-
-
-
-
-
+const resultado = miFuncion()
+console.log(resultado)
+resultado()
+resultado()
+resultado()
