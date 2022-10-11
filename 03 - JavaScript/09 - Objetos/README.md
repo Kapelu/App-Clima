@@ -6,28 +6,124 @@ const Kapelu = {
    github: 'https://github.com/Kapelu'
 }
 ```
-<h1 align="center">ARRAY</h1>
+<h1 align="center">Objetos</h1>
 
-El objeto array es un conjunto ordenado de datos por posiciones y todos asociados en una sola variable. La sintaxis de un arreglo es muy simple. Los elementos del arreglo se envuelven entre corchetes y se separan con coma. Podremos acceder a estos distintos datos de manera independiente o agrupándolos. Cabe resaltar que un array es un objeto. Veamos un ejemplo que creamos un array que contenga números, cadenas de texto y booleanos. Cada elemento del arreglo puede ser de cualquier tipo (incluso otros arreglos!).
+Los objetos en JavaScript, como en tantos otros lenguajes de programación, se pueden comparar con objetos de la vida real. El concepto de Objetos en JavaScript se puede entender con objetos tangibles de la vida real.
+
+En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, un material del que está hecha, etc. Del mismo modo, los objetos de JavaScript pueden tener propiedades que definan sus características.
+
+En palabras simples:
+
+Los objetos son una colección de propiedades
+
+Para construir objetos podemos hacerlo de dos maneras:
+
+### ***Objetos declarativos o literales*** 
+
+Podemos crear objetos sin necesidad de un constructor o instanciar una clase, para esto solo declaramos el objeto y sus propiedades.
 
 ```javascript
-let array = [25, 'zapatos', true, ['casa', 51, false]]
+const persona = {
+	nombre: 'Daniel',
+	apellido: 'Calderon',
+	edad: 42,
+	direccion: 'Uspallata 1424',
+	email: 'dcalderon@gmail.com',
+	saludo: function saludar() {
+		console.log(`hola`) // hola
+	},
+	hobby: ['leer', 'correr'],
+}
+persona.saludo()
+// accedemos a los valores del objeto
+console.log(persona.nombre) // Daniel
+console.log(persona.apellido) // Calderon
+console.log(persona.edad) // 42
+console.log(persona.direccion) // Uspallata 1424
+console.log(persona.email) // dcalderon@gmail.com
+console.log(persona.saludo)  //[funcion: saludar]
+console.log(persona.hobby)  // ['leer', 'correr']
+console.table(persona)
+console.info(persona)
 ```
+### ***Con notación clase constructor***
 
-El manejo de un array se puede hacer a traves de su indice o su valor. Veamos un ejemplo donde podremos identificarlos de manera mas eficiente.
+El prototipo de sistema no es una forma común de construir objetos. Los desarrolladores están más familiarizados en construir objetos fuera de las clases
 
 ```javascript
-let numeros = [1, 3, 5, 7, 9]//---> Estos serian los elementos separados por un coma (,)
-               0  1  2  3  4 //---> Estos serian el indice o posición que ocupa dentro del array.
-let numeros = [0] undefined  // cero no existe
+class Persona {
+	constructor(nombre, apellido, edad, direccion) {
+		this.nombre = nombre
+		this.apellido = apellido
+		this.edad = edad
+		this.direccion = direccion
+		this.datos = {                                             //objeto dentro de un objeto
+			nombresCompleto: this.nombre + ' ' + this.apellido,
+			edad: this.edad + ' años de edad',
+			direccion: this.direccion,
+		}
+	}
+	saludo() {
+		return 'hola ' + this.nombre
+	}
+}
+
+// crea los objetos
+const daniel = new Persona('daniel', 'calderon', 42, 'uspallata 456')
+const lucia = new Persona('lucia', 'calderon', 6, 'uspallata 456')
+//salidas por consola
+console.log(daniel.nombre)  //daniel
+console.log(lucia.nombre)  // lucia
+console.log(daniel.saludo())  // hola daniel
+console.log(lucia.saludo())  //hola lucia
+
+const datosLucia = lucia.datos
+console.info(datosLucia)
+console.log(datosLucia.nombresCompleto)
+
+// prototype se usa para agregar metodos de afuera de la clase.
+Persona.prototype.getDireccion = function () {
+	return this.direccion
+}
+console.log(daniel.getDireccion())  // uspallata 456
 ```
 
-***Veamos como es el manejo de un array con ejemplos :*** [:memo:](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/08%20-%20Arreglos/manejoDeArray.js)
+### ***clases con notacion funcion***
 
-***Veamos con ejemplos algunos de los metodos para aplicar a un array :*** [:memo:](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/08%20-%20Arreglos/metodosDeArray.js)
+```javascript
+function Persona(nombre, apellido, edad, direccion) {
+	this.nombre = nombre
+	this.apellido = apellido
+	this.edad = edad
+	this.direccion = direccion
+	this.saludo = function () {
+		return 'hola soy ' + this.nombre
+	}
+	this.datos = {         	//objeto dentro de un objeto
+		nombresCompleto: this.nombre + ' ' + this.apellido,
+		edad: this.edad + ' años de edad',
+		direcion: this.direccion,
+	}
+}
+// crea los objetos
+const daniel = new Persona('daniel', 'calderon', 42, 'uspallata 456')
+const lucia = new Persona('lucia', 'calderon', 6, 'uspallata 456')
+//salidas por consola
+console.log(daniel.nombre)  //daniel
+console.log(lucia.nombre)  // lucia
+console.log(daniel.saludo())  // hola daniel
+console.log(lucia.saludo())  //hola lucia
 
+const datosLucia = lucia.datos
+console.info(datosLucia)
+console.log(datosLucia.nombresCompleto)
 
-
+// prototype se usa para agregar metodos de afuera de la clase.
+Persona.prototype.getDireccion = function () {
+	return this.direccion
+}
+console.log(daniel.getDireccion()) 
+```
 
 <br/>
 <br/>
