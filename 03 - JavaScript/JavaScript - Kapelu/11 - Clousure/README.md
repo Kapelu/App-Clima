@@ -65,6 +65,34 @@ console.log(suma10(2)) // muestra 12
 
 fuente : [:memo:](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)
 
+# CallBack
 
+*Una función de callback es una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.*
+
+*veamos un ejemplo:*
+```js
+function saludar(nombre) {
+  alert('Hola ' + nombre);
+}
+
+function usuario(saludar) {
+  let nombre = prompt('Por favor ingresa tu nombre.');
+  saludar(nombre);
+}
+usuario(saludar);
+```
+*Como vemos aqui invocamos la `funcion usuario` y le entregamos como parametro la `funcion saludar`. Por lo tanto al ejecutar usuario se crea una variable y se le asignar un nombre a traves de un prompt, este nombre pasa a como argumento a la `funcion saludar`.*
+
+
+*veamos otro ejemplo:*
+```js
+function counter(contador = 0) {
+	return () => (contador = contador + 1)
+}
+
+const contador = counter()
+console.log(contador())
+console.log(contador())
+```
 
 call back  mirar ==>  https://www.youtube.com/watch?v=zQVnDW8SaA0
