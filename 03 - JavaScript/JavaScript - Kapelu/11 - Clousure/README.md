@@ -72,14 +72,14 @@ fuente : [:memo:](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)
 *veamos un ejemplo:*
 ```js
 function saludar(nombre) {
-  alert('Hola ' + nombre);
+	alert('Hola ' + nombre)
 }
 
-function usuario(saludar) {
-  let nombre = prompt('Por favor ingresa tu nombre.');
-  saludar(nombre);
+function usuario() {
+	let nombre = prompt('Por favor ingresa tu nombre.')
+	saludar(nombre)
 }
-usuario(saludar);
+usuario(saludar)
 ```
 *Como vemos aqui invocamos la `funcion usuario` y le entregamos como parametro la `funcion saludar`. Por lo tanto al ejecutar usuario se crea una variable y se le asignar un nombre a traves de un prompt, este nombre pasa a como argumento a la `funcion saludar`.*
 
