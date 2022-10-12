@@ -58,15 +58,14 @@ tablaDeMultiplicar(7,10)
 
 /*
 function multiplicador(num=0){
-  function end(){
-    let hasta=0
-    for (let i = 0; i <=hasta; i++){
-        let resultado = num * i 
-        console.table(`${num} x ${i} = ${resultado}`)
-        return resultado
-
-  }
-  return end
+    function end(){
+        let hasta=0
+        for (let i = 0; i <=hasta; i++){
+            let resultado = num * i 
+            console.table(`${num} x ${i} = ${resultado}`)
+            return resultado
+    }
+    return end
 }
 let tabla = multiplicador(2)
 console.log(tabla())

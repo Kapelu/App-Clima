@@ -1,212 +1,110 @@
-- **CLOSURES**
+# Closures
 
-En JavaScript, la gente a menudo confunde las cláusulas con el ámbito léxico.
+*Una clausura o closure permite acceder al ámbito de una función exterior desde una función interior. En JavaScript, las clausuras se crean cada vez que una función es creada.*
 
-El ámbito léxico es una parte importante de las cláusulas, pero no es una cláusula en sí mismo.
+### ***Ámbito léxico***
+*Consideremos el siguiente ejemplo:*
 
-Las cláusulas son un concepto avanzado y un tema frecuente en entrevistas técnicas.
+```js
+function iniciar() {
+  var nombre = "Kapelu";  // La variable nombre es una variable local creada por iniciar.
+  function mostrarNombre() {  // La función mostrarNombre es una función interna, una clausura.
+    console.log(nombre)  // Usa una variable declarada en la función externa.
+  }
+  mostrarNombre();
+}
+iniciar();
+```
 
-Debes tener un conocimiento básico de las funciones antes de intentar entender las cláusulas.
+*La `función iniciar()` crea una variable local llamada `nombre` y una función interna llamada `mostrarNombre()`. Por ser una función interna, esta última solo está disponible dentro del cuerpo de `iniciar()`. Notemos a su vez que `mostrarNombre()` no tiene ninguna variable propia; pero, dado que las funciones internas tienen acceso a las variables de las funciones externas, `mostrarNombre()` puede acceder a la variable nombre declarada en la función `iniciar()`.*
 
-Después de leer este artículo, espero haberte ayudado a aprender lo siguiente:
-
-* La diferencia entre ámbito léxico y cláusulas.
-* Por qué las cláusulas requieren un ámbito léxico.
-* Cómo dar un ejemplo de cláusulas durante una entrevista de trabajo.
-<p>
-<br>
+*Este es un ejemplo de `ámbito léxico`, el cual describe cómo un analizador sintáctico resuelve los nombres de las variables cuando hay funciones anidadas. La palabra `léxico` hace referencia al hecho de que el ámbito léxico se basa en el lugar donde una variable fue declarada para determinar dónde esta variable estará disponible. Las funciones anidadas tienen acceso a las variables declaradas en su ámbito exterior.*
 
 
-***¿Qué es el ámbito léxico en JavaScript?***
+https://developer.mozilla.org/es/docs/Web/JavaScript/Closures
 
-El ámbito léxico describe cómo las funciones anidadas (también conocidas como "secundarias") tienen acceso a las variables definidas en los ámbitos de sus padres.
 
-```javascript
-const miFuncion = () => {
-     let miValor = 2;
-     console.log(miValor);
+Clausuras
+Considera el siguiente ejemplo:
 
-     const funcionHija = () => {
-          console.log(miValor += 1);
-     }
-
-     funcionHija();
+function creaFunc() {
+  var nombre = "Mozilla";
+  function muestraNombre() {
+    alert(nombre);
+  }
+  return muestraNombre;
 }
 
-miFuncion();
-```
-En este ejemplo, funcionHija tiene acceso a la variable miValor que está definida en el ámbito de la función padre  miFuncion.
+var miFunc = creaFunc();
+miFunc();
+Copy to Clipboard
+Si se ejecuta este código tendrá exactamente el mismo efecto que el ejemplo anterior: se mostrará el texto "Mozilla" en un cuadro de alerta de Javascript. Lo que lo hace diferente (e interesante) es que la función externa nos ha devuelto la función interna muestraNombre()antes de ejecutarla.
 
-El ámbito léxico de funcionHija permite el acceso al ámbito del padre (función madre).
+Puede parecer poco intuitivo que este código funcione. Normalmente, las variables locales dentro de una función sólo existen mientras dura la ejecución de dicha función. Una vez que creaFunc() haya terminado de ejecutarse, es razonable suponer que no se pueda ya acceder a la variable nombre. Dado que el código funciona como se esperaba, esto obviamente no es el caso.
 
-<p>
-<br>
+La solución a este rompecabezas es que miFunc se ha convertido en un closure. Un closure es un tipo especial de objeto que combina dos cosas: una función, y el entorno en que se creó esa función. El entorno está formado por las variables locales que estaban dentro del alcance en el momento que se creó el closure. En este caso, miFunc es un closure que incorpora tanto la función muestraNombre como el string "Mozilla" que existían cuando se creó el closure.
 
-***¿Qué es una cláusula en JavaScript?***
+Este es un ejemplo un poco más interesante: una función creaSumador:
 
-Una cláusula es una función que tiene acceso al ambito de su función padre, incluso después de que la función padre haya terminado de ejecutar.
-
-Observemos la primera parte de la oración, antes de la coma:
-
->...una función que tiene acceso al ambito de su padre
-¡Eso describe el ámbito léxico!
-
-Pero necesitamos la segunda parte de la definición para tener un ejemplo de una cláusula...
-
->...incluso después de que la función padre haya terminado de ejecutar
-
-Veamos un ejemplo de una cláusula:
-
-```javascript
-const miFuncion = () => {
-     let miValor = 2;
-     console.log(miValor);
-
-     const funcionHija = () => {
-          console.log(miValor += 1);
-     }
-
-     return funcionHija;
+function creaSumador(x) {
+  return function(y) {
+    return x + y;
+  };
 }
 
-const resultado = miFuncion();
-console.log(resultado);
-resultado();
-resultado();
-resultado();
-```
-En esta versión, miFuncion devuelve funcionHija en lugar de llamarla.
+var suma5 = creaSumador(5);
+var suma10 = creaSumador(10);
 
-Por tanto, cuando a resultado  se le asigna miFuncion(), la instrucción en la consola dentro de miFuncion es registrada, pero no la instrucción dentro de  funcionHija.
+console.log(suma5(2));  // muestra 7
+console.log(suma10(2)); // muestra 12
+Copy to Clipboard
+En este ejemplo, hemos definido una función creaSumador(x) que toma un argumento único x y devuelve una nueva función. Esa nueva función toma un único argumento y, devolviendo la suma de x + y.
 
-funcionHija no es ejecutada.
+En esencia, creaSumador es una fábrica de función: crea funciones que pueden sumar un valor específico a su argumento. En el ejemplo anterior utilizamos nuestra fábrica de función para crear dos nuevas funciones: una que agrega 5 a su argumento y otra que agrega 10.
 
-En lugar de eso, es devuelta y guardada en resultado.
+suma5 y suma10 son ambos closures. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos. En el entorno suma5, x es 5. En lo que respecta a suma10, x es 10.
 
-Además, debemos darnos cuenta de que miFuncion ha terminado de ejecutarse.
+Closures prácticos
+Hasta aquí hemos visto teoría, pero ¿son los closures realmente útiles? Vamos a considerar sus implicaciones prácticas. Un closure permite asociar algunos datos (el entorno) con una función que opera sobre esos datos. Esto tiene evidentes paralelismos con la programación orientada a objetos, en la que los objetos nos permiten asociar algunos datos (las propiedades del objeto) con uno o más métodos.
 
-La línea con console.log(resultado) debe mostrar en la consola que resultado ahora contiene el valor de la función anónima que esfuncionHija.
+En consecuencia, puede utilizar un closure en cualquier lugar en el que normalmente pondría un objeto con un solo método.
 
-Ahora, cuando ejecutamos resultado(), estamos llamando a la función anónima que es funcionHija.
+En la web hay situaciones habituales en las que aplicarlos. Gran parte del código JavaScript para web está basado en eventos: definimos un comportamiento y lo conectamos a un evento que es activado por el usuario (como un click o pulsación de una tecla). Nuestro código generalmente se adjunta como una devolución de llamada (callback): que es una función que se ejecuta en respuesta al evento.
 
-Como hija de miFuncion, esta función anónima tiene acceso a la variable miValor dentro de miFuncion ¡incluso después de que haya terminado su ejecución!
+Aquí está un ejemplo práctico: Supongamos que queremos añadir algunos botones a una página para ajustar el tamaño del texto. Una manera de hacer esto es especificar el tamaño de fuente del elemento body en píxeles y, a continuación, ajustar el tamaño de los demás elementos de la página (como los encabezados) utilizando la unidad relativa em:
 
-La cláusula que creamos, ahora nos permite continuar aumentando el valor de la variable miValor  cada vez que ejecutamos resultado().
-
-***Tómate tu tiempo con cláusulas***
-
-Las cláusulas se consideran un concepto avanzado con motivo.
-
-Incluso con un desglose paso a paso de lo que es una cláusula, entender este concepto puede llevar tiempo.
-
-No te apresures para entenderlo y no seas duro contigo mismo si no tiene sentido al principio.
-
-Cuando entiendas completamente las cláusulas, es posible que sientas lo que sintió Neo cuando vio la Matriz. *¡Verás nuevas posibilidades de código y te darás cuenta de que estuvieron ahí todo el tiempo!*
-
-<p>
-<br>
-
-***Analicemos unos ejemplos más!!!***
-
-
-```javascript
-    function saludar( saludo ){
-    	return function( nombre ){
-    		console.log(saludo + ' ' + nombre);
-    	}
-    }
-    var saludarHola = saludar('Hola'); // Esto devuelve una función
-    saludarHola('Toni'); // 'Hola Toni'
-```
-
-En este ejemplo podemos ver que hay una función “*padre*” y una función “*hija*”. El parámetro de la función padre la definimos en una variable que ejecuta a la función padre.
-
-Luego de terminar de ejecutar y retornar una función (la que estamos guardando en `saludarHola`), ese contexto es destruido. ¿Pero qué pasa con la variable **saludo**?. Bueno, el interprete saca el contexto del stack, pero deja en algún lugar de memoria las variables que se usaron adentro (hay un proceso dentro de JavaScript que se llama `garbage collection` que eventualmente las va limpiando si no las usamos. ). Por lo tanto, esa variable todavía va a estar en la memoria.
-
-```javascript
-var creaFuncion = function(){
-	var arreglo = [];
-	for ( var i = 0; i < 3; i++){
-		arreglo.push(function(){console.log(i);})
-	}
-	return arreglo;
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
-var arr = creaFuncion();
-arr[0]() // 3
-arr[1]() // 3
-```
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.2em;
+}
+Copy to Clipboard
+Nuestros botones interactivos de tamaño de texto pueden cambiar la propiedad font-size del elemento body, y los ajustes serán aplicados por los otros elementos de la página gracias a las unidades relativas.
 
-En este ejemplo, se crea una función **creaFuncion** en la cual se declara un *arreglo* vacío y un *bucle for*. En cada iteración del bucle se pushea una nueva función al arreglo que consologea el índice **i** de esa iteración. Finalmente retorna el arreglo. Luego se crea una variable **arr** que ejecuta la función padre.
+Aquí está el código JavaScript:
 
-Entonces, cuando imprimimos **arr[0]()** se ejecutará la primera función del arreglo, lo que debería mostrar el índice **0**. En este caso no lo hace porque la variable **i** en el *bucle for* fue definida con **var**.
-
-```javascript
-var creaFuncion = function(){
-	var arreglo = [];
-	for ( let i=0; i < 3; i++){
-		arreglo.push(function(){console.log(i);})
-	}
-	return arreglo;
+function makeSizer(size) {
+  return function() {
+    document.body.style.fontSize = size + 'px';
+  };
 }
 
-var arr = creaFuncion();
-arr[0]() // 0
-arr[1]() // 1
-```
+var size12 = makeSizer(12);
+var size14 = makeSizer(14);
+var size16 = makeSizer(16);
+Copy to Clipboard
+size12, size14 y size16 ahora son funciones que cambian el tamaño del texto de body a 12, 14 y 16 pixels, respectivamente. Podemos conectarlos a botones (en este caso enlaces) de la siguiente forma:
 
-En este caso si se imprimen los índices correspondientes porque declaramos la variable **i** con **let**.
-
-A continuación veremos otra forma de hacer lo mismo.
-
-```javascript
-var creaFuncion = function(){
-	var arreglo = [];
-	for ( var i=0; i < 3; i++){
-		// IIFE
-		arreglo.push((function(j){return function() {console.log(j);}}(i)))
-	}
-	return arreglo;
-}
-
-var arr = creaFuncion();
-arr[0]() // 0
-arr[1]() // 1
-arr[2]() // 2
-```
-
-Si queremos que cada función guardase el valor de `i`, deberíamos crear un *execution content* donde se cree una variable nueva en cada iteración. Para eso vamos a usar una IIFE a la cuál le vamos a pasar como parámetro `i`. Como estamos ejecutando la función, se va a a crear un contexto nuevo por cada ejecución, y por ende van a existir tres variables `j` (cada una en un contexto distinto) que contendrán los valores recibidos por parámetro.
-
-```javascript
-function hacerSaludo( lenguaje ){
-	if ( lenguaje === 'en'){
-		return function(){console.log('Hi!');}
-	}
-
-	if ( lenguaje === 'es'){
-		return function(){console.log('Hola!');}
-	}
-}
-
-var saludoIngles = hacerSaludo('en');
-var saludoEspaniol = hacerSaludo('es');
-
-saludoIngles()
-saludoEspaniol()
-```
-
-Este caso es igual al anterior, solo que se agrega un condicional dentro de la función padre. Por lo que ahora puede ejecutar, la misma función, una u otra función hija, dependiendo del parámetro.
-
-- **CALLBACK**
-
-Antes que nada debemos entender que las funciones pueden ser recibidas como parametros. Es por ello que una función callback es aquella que es pasada como argumento a otra función para que sea "llamada de nuevo" (call back) en un momento posterior. Una función que acepta otras funciones como argumentos es llamada función de orden-superior (High-Order), y contiene la lógica para determinar cuándo se ejecuta la función callback. Es la combinación de estas dos la que nos permite ampliar nuestra funcionalidad.
-
-```javascript
-const operation=(numerol,numero2,op) =>{
- return op(numerol,numero2)
-}
-operation(1,3,(a,b)⇒a+b)
-operation(1,3,(a,b)⇒a*b)
-operation(1,3,(a,b)⇒a-b)
-```
-↑
+document.getElementById('size-12').onclick = size12;
+document.getElementById('size-14').onclick = size14;
+document.getElementById('size-16').onclick = size16;
+Copy to Clipboard
+<a href="#" id="size-12">12</a>
+<a href="#" id="size-14">14</a>
+<a href="#" id="size-16">16</a>
