@@ -7,8 +7,6 @@
 *Para lograr un aprendizaje significativo es necesario que el estudiante `aprenda a aprender`, que elabore e internalice conocimientos pero también habilidades y destrezas que hacen más eficiente su aprendizaje. La actitud frente al aprendizaje debe considerar el tener tolerancia a la frustración. El aprendiz debe aprender a enfrentar el desánimo que genera la dificultad de lo que se aprende; y no obstante tener el firme convencimiento de que se encuentra en el camino correcto y que necesita pasar por esos niveles para llegar a construir el nuevo nivel de conocimiento y ver cumplido así su objetivo.*
 
 <br>
-<br>
-
 
 ----
 <h1 align="center">5 consejos para desarrolladores Junior</h1> 
