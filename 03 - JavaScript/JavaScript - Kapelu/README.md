@@ -1,4 +1,4 @@
-<img align='center' src="" min-width="200px" max-width="200px" width="900px" alt="kapelucito">
+<img align='center' src="https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/JavaScript%20-%20Kapelu/scr/code.png" min-width="200px" max-width="200px" width="900px" alt="kapelucito">
 <h1 align="center">Aprehender!!!</h1>
 
 Los conocimientos adquiridos a través del `aprender` se pueden olvidar con el tiempo ya que el individuo no lo internaliza, como el caso de que a los días no se recuerda la lección estudiada en la universidad, muy diferente con el `aprehender` ya que los conocimientos obtenidos jamás se olvidan, por ejemplo: el colocarse unos zapatos, o que string es una cadena de texto.
@@ -8,7 +8,7 @@ Por lo tanto, es fundamental que tengamos en claro nuestro propósito, a donde q
 Para lograr un aprendizaje significativo es necesario que el estudiante `aprenda a aprender`, que elabore e internalice conocimientos pero también habilidades y destrezas que hacen más eficiente su aprendizaje. La actitud frente al aprendizaje debe considerar el tener tolerancia a la frustración. El aprendiz debe aprender a enfrentar el desánimo que genera la dificultad de lo que se aprende; y no obstante tener el firme convencimiento de que se encuentra en el camino correcto y que necesita pasar por esos niveles para llegar a construir el nuevo nivel de conocimiento y ver cumplido así su objetivo.
 <br>  
 <br> 
-<img src="./frasePele.jpg"/>
+<img src="https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/JavaScript%20-%20Kapelu/scr/frasePele.jpg"/>
 <br> 
 <br> 
 <br> 
