@@ -1,4 +1,4 @@
-<img align='center' src="/code.png" min-width="200px" max-width="200px" width="900px" alt="kapelucito">
+<img align='center' src="" min-width="200px" max-width="200px" width="900px" alt="kapelucito">
 <h1 align="center">Aprehender!!!</h1>
 
 Los conocimientos adquiridos a través del `aprender` se pueden olvidar con el tiempo ya que el individuo no lo internaliza, como el caso de que a los días no se recuerda la lección estudiada en la universidad, muy diferente con el `aprehender` ya que los conocimientos obtenidos jamás se olvidan, por ejemplo: el colocarse unos zapatos, o que string es una cadena de texto.
