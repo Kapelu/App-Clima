@@ -1,6 +1,6 @@
 # LISTAS ENLAZADAS
 
-Una lista enlazada es una estructura de datos lineal que se compone de elementos que están autorreferenciados entre sí, es decir, cada elemento de la lista tendrá una referencia o puntero al siguiente elemento. Destacando que estos elementos se almacenan en ubicaciones no contiguas en memoria.
+*Una lista enlazada es una estructura de datos lineal que se compone de elementos que están autorreferenciados entre sí, es decir, cada elemento de la lista tendrá una referencia o puntero al siguiente elemento. Destacando que estos elementos se almacenan en ubicaciones no contiguas en memoria.*
 
 Esta estructura permite la inserción o eliminación de elementos desde cualquier posición en la secuencia durante la iteración. Las variantes más complejas agregan enlaces adicionales, permitiendo una eficiente inserción o eliminación desde referencias arbitrarias del elemento. Una desventaja de las listas lazadas es que el tiempo de acceso es lineal (y difícil de canalizar). Un acceso más rápido, como un acceso aleatorio, no es factible. Los arreglos tienen una mejor locazion en caché comparados con las listas lazadas.
 
