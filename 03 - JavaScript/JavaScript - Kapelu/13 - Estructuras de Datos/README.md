@@ -12,7 +12,7 @@
 
 *Sin más preámbulo vayamos a estudiar cada uno de ellos:*
 
-[:memo: Listas Enlazadas](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)
+[:memo: Listas Enlazadas](https://github.com/Kapelu/Apuntes-Personales/tree/main/03%20-%20JavaScript/JavaScript%20-%20Kapelu/13%20-%20Estructuras%20de%20Datos/01%20-%20Listas%20Enlazadas)
 
 [:memo: Tabla Hash](https://developer.mozilla.org/es/docs/Web/JavaScript/Closures)
 
