@@ -1,8 +1,30 @@
 # ESTRUCTURAS DE DATOS
 
-***LinkedList***: *Este es un tipo de estructura lineal y dinámica de datos. Lineal porque a cada elemento le puede seguir solo otro elemento; dinámica porque se puede manejar la memoria de manera flexible, sin necesidad de reservar espacio con antelación.*
+*En ciencias de la computación, una estructura de datos​ es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera eficiente. Son un medio para manejar grandes cantidades de datos de manera eficiente para usos tales como grandes bases de datos y servicios de indización de Internet.*
 
-*La principal ventaja de manejar un tipo dinámico de datos es que se puede adquirir posición de memoria a medida que se necesitan; éstas se liberan cuando ya no se requieren. Así es posible crear estructuras dinámicas que se expandan o contraigan, según se les agregue o elimine elementos. El dinamismo de estas estructuras soluciona el problema de decidir cuál es la cantidad óptima de memoria que se debe reservar para un problema específico. Sin embargo, es importante destacar que las estructuras dinámicas no pueden reemplazar a los arreglos en todas sus aplicaciones. Existen numerosos casos que podrían facilitarte ser solucionados aplicando arreglos, mientras que si se utilizan estructuras dinámicas, como las listas, la solución de estos problemas se complicaría.*
+*Primero, debemos diferenciar entre estructura de dato estática y estructura de dato dinámica*
+
+* ****Las estructuras de datos estáticas**: Son aquellas en las que el tamaño ocupado en memoria se define antes de que el programa se ejecute y no puede modificarse dicho tamaño durante la ejecución del programa.*
+
+* ***Las estructura de datos dinámica***: Es aquella en la que el tamaño ocupado en memoria puede modificarse durante la ejecución del programa.
+
+Cada tipo de estructura dependerá del tipo de aplicación que se requiera. Una típica dentro de las estructuras de datos estáticas son los arrays:
+
+Arrays
+¿Qué es un array en programación? Un array es un tipo de dato estructurado que permite almacenar un conjunto de datos homogéneo y ordenado, es decir, todos ellos del mismo tipo y relacionados. Su condición de homogéneo, indica que sus elementos están compuestos por el mismo tipo de dato, y su condición de ordenado hace que se pueda identificar del primer al último elemento que lo compone.
+
+Estructura de datos dinámicas
+Por otro lado, vimos que en programación existen estructuras de datos dinámicas, es decir, una colección de elementos -nodos- que normalmente se utilizan para dejar asentados registros. A diferencia de un array que contiene espacio para almacenar un número fijo de elementos, una estructura dinámica de datos se amplía y contrae durante la ejecución del programa. Veamos algunos casos:
+
+Estructura de datos lineales
+Las estructuras de datos lineales son aquellas en las que los elementos ocupan lugares sucesivos en la estructura y cada uno de ellos tiene un único sucesor y un único predecesor, es decir, sus elementos están ubicados uno al lado del otro relacionados en forma lineal.
+
+Hay tres tipos de estructuras de datos lineales:
+
+Listas enlazadas
+Pilas
+Colas
+
 
 * *Las `Listas enlazadas` son colecciones de elementos llamados nodos, el orden entre estos se establece por medio de un tipo de datos denominado punteros, apuntadores, direcciones o referencias a otros nodos. Por tanto, siempre es importante distinguir entre un dato de tipo apuntador y el dato contenido en la celda al cual este apunta. Las operaciones mas importantes que se realizan en las estructuras de datos son las de busqueda, insercion y eliminacion.* 
 
