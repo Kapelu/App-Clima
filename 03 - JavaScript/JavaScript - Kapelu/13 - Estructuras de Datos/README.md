@@ -30,7 +30,8 @@ Por otro lado, vimos que en programación existen estructuras de datos dinámica
 
 
 * ***Estructuras de datos no lineales***
-*Los `Árboles Binarios` son una estructura no lineal formada por un conjunto de nodos y un conjunto de ramas. En un árbol existe un nodo especial denominado raíz. Así mismo, un nodo del que sale alguna rama, recibe el nombre de nodo de bifurcación o nodo rama y un nodo que no tiene ramas recibe el nombre de nodo hoja.*
+
+  *Los `Árboles Binarios` son una estructura no lineal formada por un conjunto de nodos y un conjunto de ramas. En un árbol existe un nodo especial denominado raíz. Así mismo, un nodo del que sale alguna rama, recibe el nombre de nodo de bifurcación o nodo rama y un nodo que no tiene ramas recibe el nombre de nodo hoja.*
 
 <br>
 
