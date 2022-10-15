@@ -6,14 +6,13 @@ productOfArray([1,2,3,10]) debería retornar 60
 */
 
 function productOfArray(arr) {
-	var multiplicar = 1
-	for (var i = 0; i < arr.length; i++) {
-		console.log(arr[i]);
+	let multiplicar = 1
+	for (let i = 0; i < arr.length; i++) {
 		multiplicar = multiplicar * arr[i]
 	}
 	return multiplicar
 }
 
-console.log(productOfArray([1, 2, 3]))  // 6
-console.log(productOfArray([1, 2, 3,10]))  // 60
-console.log(productOfArray([1, 5, 3,8]))  // 120
+console.log(productOfArray([1, 2, 3])) // 6
+console.log(productOfArray([1, 2, 3, 10])) // 60
+console.log(productOfArray([1, 5, 3, 8])) // 120

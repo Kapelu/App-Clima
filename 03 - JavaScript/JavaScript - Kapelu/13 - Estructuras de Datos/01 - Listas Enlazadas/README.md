@@ -71,31 +71,77 @@ Los siguientes pasos serán agregar a la clase **LinkedList** métodos que nos a
 ***Insertar elementos a la LinkedList***
 
 ```javascript
-
-Lista.prototype.agregar = function (value) {
-    // Si el head es null entonces head sera el nuevo NODO 
-if (this.head == null) this.head = new Nodo(value)
- else { // Sino
-         // creamos un puntero a head
-let refAgregar = this.head
-        // mientras el next del siguiente nodo no sea igual a null
-while (refAgregar.next != null) {
-          //el next del nodo pasa al siguiente next
-refAgregar = refAgregar.next
+function LinkedList() {
+    this.head = null
 }
 
-refAgregar.next = new Nodo(value)
-}
+function Node(valor) {
+    this.value = valor
+    this.next = null
 }
 
-const lista = new Lista()
+LinkedList.prototype.add = function (valor) {
+	var nuevoNodo = new Node(valor)
+
+	if (!this.head) {this.head = nuevoNodo}
+    else {
+		var tailActual = this.head
+		while (tailActual.next !== null) {
+			tailActual = tailActual.next
+		}
+		tailActual.next = nuevoNodo
+	}
+}
+
+LinkedList.prototype.remove = function () {
+	if (!this.head) {
+		return undefined
+	}
+
+	if (this.head.next === null) {
+		var unicoNodo = this.head
+		this.head = null
+		return unicoNodo.value
+	}
+
+	var nodoActual = this.head.next
+	var nodoPrevious = this.head
+	while (nodoActual.next !== null) {
+		nodoPrevious = nodoActual
+		nodoActual = nodoActual.next
+	}
+	nodoPrevious.next = null
+	return nodoActual.value
+}
+
+LinkedList.prototype.search = function (arg) {
+	var nodoActual = this.head
+
+	if (nodoActual === null) {
+		return null
+	}
+
+	while (nodoActual !== null) {
+		if (typeof arg === 'function') {
+			if (arg(nodoActual.value)) {
+				return nodoActual.value
+			}
+		} else if (nodoActual.value === arg) {
+			return nodoActual.value
+		}
+		nodoActual = nodoActual.next
+	}
+
+	return null
+}
+
+let lista = new LinkedList()
+lista.add(5)
+lista.add(7)
 console.log(lista)
+console.log(lista.search(5));
+lista.remove()
 
-lista.agregar("Primero")
-lista.agregar("Segundo")
-lista.agregar("Tercero")
-lista.agregar("Cuarto")
-lista.agregar("Quinto")
 console.log(lista)
 ```
 
