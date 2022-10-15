@@ -21,3 +21,6 @@ function cacheFunction(cb) {
 		return (cache[arg] = cb(arg))
 	}
 }
+
+
+//!  ejemplo

@@ -74,18 +74,18 @@ Los siguientes pasos serán agregar a la clase **LinkedList** métodos que nos a
 
 Lista.prototype.agregar = function (value) {
     // Si el head es null entonces head sera el nuevo NODO 
-	if (this.head == null) this.head = new Nodo(value)
-	else { // Sino
+if (this.head == null) this.head = new Nodo(value)
+ else { // Sino
          // creamos un puntero a head
-		let refAgregar = this.head
+let refAgregar = this.head
         // mientras el next del siguiente nodo no sea igual a null
-		while (refAgregar.next != null) {
-            //el next del nodo pasa al siguiente next
-			refAgregar = refAgregar.next
-		}
+while (refAgregar.next != null) {
+          //el next del nodo pasa al siguiente next
+refAgregar = refAgregar.next
+}
 
-		refAgregar.next = new Nodo(value)
-	}
+refAgregar.next = new Nodo(value)
+}
 }
 
 const lista = new Lista()
