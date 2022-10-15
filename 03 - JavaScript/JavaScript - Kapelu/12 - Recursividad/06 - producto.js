@@ -14,6 +14,6 @@ function productOfArray(arr) {
 	return multiplicar
 }
 
-const arr = [1, 2, 3]
-console.log(arr)
-console.log(productOfArray(arr))
+console.log(productOfArray([1, 2, 3]))  // 6
+console.log(productOfArray([1, 2, 3,10]))  // 60
+console.log(productOfArray([1, 5, 3,8]))  // 120
