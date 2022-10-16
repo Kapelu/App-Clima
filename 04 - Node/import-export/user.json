@@ -1,0 +1,12 @@
+{
+	"users": [
+		{
+			"nombre": "Daniel",
+            "canal": "developing"
+		},
+        {
+			"nombre": "Dario",
+            "canal": "developing"
+		}
+	]
+}
