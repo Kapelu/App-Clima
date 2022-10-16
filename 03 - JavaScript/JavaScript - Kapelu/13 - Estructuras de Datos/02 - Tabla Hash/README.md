@@ -5,3 +5,6 @@
 *Una tabla hash transforma una llave en un índice entero, usando una función hash, el índice decidirá dónde almacenar el par llave/valor en la memoria.*
 
 *Normalmente se utiliza una tabla hash por su rapidez en las operaciones de búsqueda, inserción y eliminación*
+*para poder entenderlo mejor vamos a ver un ejemplo:*
+
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada.png)
