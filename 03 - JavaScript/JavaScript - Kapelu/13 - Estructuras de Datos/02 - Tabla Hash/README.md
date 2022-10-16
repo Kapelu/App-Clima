@@ -7,4 +7,4 @@
 *Normalmente se utiliza una tabla hash por su rapidez en las operaciones de búsqueda, inserción y eliminación*
 *para poder entenderlo mejor vamos a ver un ejemplo:*
 
-![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/imagenes/Lista-enlazada.png)
+![](https://github.com/Kapelu/Apuntes-Personales/blob/main/03%20-%20JavaScript/JavaScript%20-%20Kapelu/scr/tablaHash01.png)
