@@ -13,71 +13,43 @@
 *search: Busca un valor dentro de la lista. Puede recibir un valor o una función. Si no hubiera resultados, devuelve null.
 */
 
-function LinkedList() {
-    this.head = null
-    this._length = 0
-}
-
-function Node(value) {
-    this.value = value
-    this.next = null
-}
+function LinkedList() {this.head = null; this._length = 0}
+function Node(value) {this.value = value; this.next = null}
 
 LinkedList.prototype.add = function (data) {
-    let node = new Node(data)
-
-    if (this.head === null) {
-    // cuando la lista esta vacia
-    this.head = node
-    } else {
-    // cuando hay al menos un nodo en la lista
-    let current = this.head
-    while (current.next) {
-        current = current.next
-    }
-    current.next = node;
-    }
-
-    this._length++
-    return node
-};
+	let node = new Node(data)
+	if (this.head === null) this.head = new Node(data)
+	else {
+		let current = this.head
+		while (current.next) {current = current.next}
+		current.next = node
+	}
+	this._length++
+	return node
+}
 
 LinkedList.prototype.remove = function () {
-    let current = this.head
-    if (this._length === 0) return null;
-    // ALTERNATIVA: consultar si la lista esta vacia
-    // if(this.head === null) return null;
-    else if (this._length === 1) {
-    // ALTERNATIVA:
-    // if(this.head.next === null)
-    let aux = current.value
-    this.head = null
-    this._length--
-    return aux
-    }
-
-    // aca simplemente mira que pasa dos pasos adelante de el
-    while (current.next.next) {
-        current = current.next
-    }
-
-    let aux = current.next.value
-    current.next = null;
-    this._length--
-    return aux
-};
+	let current = this.head
+	// si current no existe
+	if (!current) return null
+	// si current tiene un valor
+	if (!current.next) {this.head = null; return current.value}
+	// mientras current.next.next sea verdadero current = current.next
+	while (current.next.next){ current = current.next}
+	let aux = current.next
+	current.next = null
+	return aux.value
+}
 
 LinkedList.prototype.search = function (value) {
-    if (this.head === null) return null;
-    let current = this.head
-    while (current) {
-    if (current.value === value) return current.value
-    else if (typeof value === 'function') {
-        if (value(current.value)) {
-        return current.value
-        }
-    }
-    current = current.next
-    }
-    return null
+	let current = this.head
+	if (!current) return null
+	while (current) {
+		if (typeof value === 'function'){
+			if (value(current.value)) return current.value
+		}
+		if (current.value === value) return current.value
+		current = current.next
+	}
+	return null
 }
