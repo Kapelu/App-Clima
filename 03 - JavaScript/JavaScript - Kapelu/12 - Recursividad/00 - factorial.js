@@ -3,7 +3,6 @@
 */
 
 function nFactorial(n) {
-    let factorial = n <= 1 ? 1 : n * nFactorial(n - 1);
-    return factorial;
+    return  n <= 1 ? 1 : n * nFactorial(n - 1);
 }
 console.log(nFactorial(5));
