@@ -41,3 +41,7 @@ HashTable.prototype.hasKey = function (key) {
 	let i = this.hash(key)
 	return this.buckets[i].hasOwnProperty(key)
 }
+
+const input = new HashTable()
+//input.hash
+console.log(input.hash('foo'));
