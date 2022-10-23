@@ -10,4 +10,4 @@ const multiplicacion = (numA, numB) => {
 	return numA + numB
 }
 
-// 1 - module.exports = {suma, resta, multiplicacion}
+module.exports = {suma, resta, multiplicacion}
