@@ -10,8 +10,8 @@ function DecimalABinario(num) {
 
 console.log(DecimalABinario(19))
 
-/** OTRA OPCION
-/*
+/** OTRA OPCION **/
+
 function DecimalABinario(num) {
   if (num <= 0) return '0'
   var binario = []
@@ -20,4 +20,4 @@ function DecimalABinario(num) {
     num = Math.floor(num / 2)
   }
   return binario.join('')
-}*/
+}
