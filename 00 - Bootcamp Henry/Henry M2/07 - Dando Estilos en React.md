@@ -316,7 +316,7 @@ Sabiendo esto, si hacemos un `join` de un arreglo formado por cada clase que use
 
 > Este cambio de filosofía es relativamente nuevo y todavía están surgiendo ideas nuevas y nuevas formas de hacer las cosas, asi que por ahora está sucediendo lo mismo que en este comic:
 
->![xkcd](/_src/assets/07-React-Estilos/standards.png)
+>![xkcd](/_img/07-React-Estilos/standards.png)
 
 > Estan apareciendo muchas formas distintas de incluir CSS en React, todavía no se puede decir cual es la mejor, todas tienen sus pros y sus contras. Así que hay que tener paciencia, probar varias y quedarse con la que más nos gusta. Lo importante es entender que está sucediendo por detrás.
 
