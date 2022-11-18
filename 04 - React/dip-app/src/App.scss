@@ -1,0 +1,9 @@
+@import './component/variables-css';
+
+*{
+  margin: 0;
+  padding:0;
+  background-color: $background-home;
+  text-align: center;
+  color: $color-text;
+}
