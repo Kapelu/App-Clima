@@ -1,5 +1,0 @@
-Con el atributo "capture" indicas la cámara:
-- user: cámara delantera
-- environment: cámara trasera
-
-Además, puedes captar fotos y vídeos, según el atributo "accept".
