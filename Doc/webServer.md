@@ -12,7 +12,7 @@ Un servidor web es cualquier computadora o sistema que procese solicitudes (requ
 ### Modelo cliente servidor
 <br>
 
-![client-server](../_src/assets/03-WebServer/csmodel.png)
+![client-server](../assets/03-WebServer/csmodel.png)
 
 Este es el modelo simplificado de cualquier consulta a un servidor web.
 
@@ -55,13 +55,13 @@ Para probar el código, corremos el código usando `node app.js`. Primero notamo
 
 Ahora, para ver si está funcionando como esperábamos vamos a ir al browser y en la barra de dirección escribrimos `localhost:1337`, de esta forma el browser va a ser un request al socket donde dejamos escuchando nuestro server.
 
-![Server-Running](/_src/assets/03-WebServer/serverRunning.png)
+![Server-Running](/assets/03-WebServer/serverRunning.png)
 
 Como vemos el servidor respondió con el texto que especificamos en nuestro código!
 
 De hecho, usando las developer tools, podemos ver el request HTTP que hizo el server:
 
-![Server-Network](/_src/assets/03-WebServer/serverNetwork.png)
+![Server-Network](/assets/03-WebServer/serverNetwork.png)
 
 ## ¿Qué más podemos hacer, ahora que tenemos un server corriendo?
 
@@ -115,7 +115,7 @@ http.createServer( function(req, res){
 
 Corremos el servidor con `node` y vemos el nuevo resultado:
 
-![Server-con-Html](/_src/assets/03-WebServer/serverConHtml.png)
+![Server-con-Html](/assets/03-WebServer/serverConHtml.png)
 
 Como vemos, cuando le llegó el request al server, este leyó el archivo html y lo envió. El browser interpretó que el contenido era `text/html` y lo renderizó como tal.
 
@@ -166,7 +166,7 @@ http.createServer( function(req, res){
 
 Si todo funcionó bien, al recibir el request el server leerá el archivo html, reemplazará el contenido de la variable dentro del placeholder que habíamos definido. Luego enviará el resultado al browser por lo que deberíamos ver lo siguente:
 
-![Server-Template](/_src/assets/03-WebServer/serverTemplate.png)
+![Server-Template](/assets/03-WebServer/serverTemplate.png)
 
 ### Devolviendo JSON
 
@@ -209,7 +209,7 @@ http.createServer( function(req, res){
 
 De nuevo, corremos el servidor y vamos al browser a probar nuestro nuevo endpoint.
 
-![Server-Template](/_src/assets/03-WebServer/jsonServer.png)
+![Server-Template](/assets/03-WebServer/jsonServer.png)
 
 Como vemos, nuestro servidor nos devolvió correctamente el objeto que habiamos creado.
 
@@ -250,13 +250,13 @@ Ahora corramos el servidor, y probemos los distintos endpoints en el browser.
 
 Vamos a 'localhost:1337/':
 
-![Slash-Server](/_src/assets/03-WebServer/slashServer.png)
+![Slash-Server](/assets/03-WebServer/slashServer.png)
 
 Nos devolvió el HTML, como esperabamos!
 
 Ahora a 'localhost:1337/':
 
-![Api-Server](/_src/assets/03-WebServer/apiserver.png)
+![Api-Server](/assets/03-WebServer/apiserver.png)
 
 :D
 
@@ -294,7 +294,7 @@ http.createServer( function(req, res){
 
 Ahora, si probamos desde el browser una URL que _no existe_, por ejemplo `http://localhost:1337/hola/como/va` obtenemos el siguiente resultado:
 
-![404-Server](/_src/assets/03-WebServer/404server.png)
+![404-Server](/assets/03-WebServer/404server.png)
 
 Copado, no?
 
