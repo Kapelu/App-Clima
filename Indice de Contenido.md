@@ -30,7 +30,7 @@
 <details><summary><b>JavaScript</b></summary>
 <p>
 
-* [JavaScript](./Doc/JavaScript.md)
+* [JavaScript](./Doc/03%20-%20JavaScript/README.md)
 </p>
 </details>
 </div>
