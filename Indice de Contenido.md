@@ -1,6 +1,6 @@
 <p align="center">
-<a><img src="https://readme-typing-svg.herokuapp.com?font=Comic+mono&duration=1000&pause=2002&color=3119FF&center=true&vCenter=true&multiline=true&width=600&height=50&lines=
-Mi+camino+a+developer+fullstack+!+!+!" alt="Muchas Gracias por visitar mi perfil !!!" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=6000&pause=3000&color=7D11F7&center=true&vCenter=true&width=600&lines=Mi+camino+a+Developer+FullStack+!!!" alt="Muchas Gracias por visitar mi perfil !!!" />
+</a>
 </p>
 
 <hr/>
