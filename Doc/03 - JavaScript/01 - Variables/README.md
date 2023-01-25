@@ -8,6 +8,8 @@ const Kapelu = {
 ```
 <h1 align="center">VARIABLES</h1>
 
+[HOME](../README.md)
+
 Las variables son la manera como los programadores le dan nombre a un valor para poder reusarlo, actualizarlo o simplemente registrarlo. Las variables se pueden usar para guardar cualquier tipo de dato en JavaScript.
 
 >*NOTA: Decimos que las variables contienen valores. Ésta es una importante distinción que debemos reconocer. Las variables no son los valores en sí mismos; son contenedores de valores.*
@@ -85,3 +87,8 @@ console.log(`${edad}`)   // edad is not defined (edad no esta definida)
 * Reglas al declarar nombres de variables en JavaScript
 * Cuales son los tipos de datos que se le pueden asignar a las variables
 * Tareita de investigar como se usar `${}` al llamar una variable y en que caso se puede usar. 
+
+<br>
+<br>
+
+[HOME](../README.md)

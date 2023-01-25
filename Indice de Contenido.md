@@ -31,6 +31,10 @@
 <p>
 
 * [JavaScript](./Doc/03%20-%20JavaScript/README.md)
+* [Objeto]()
+* [Arreglo]()
+* [This]()
+* [Pasar por Referencia]()
 </p>
 </details>
 </div>
@@ -38,7 +42,8 @@
 <details><summary><b>JS Avanzado</b></summary>
 <p>
 
-* [JS Avanzado](./Doc/JavaScript-Avanzado.md)
+* [DOM](./Doc/JavaScript-Avanzado.md)
+* 
 </p>
 </details>
 </div>
@@ -48,6 +53,8 @@
 <p>
 
 * [DOM](./Doc/DOM.md)
+* [Pasar por referencia]()
+* [Asincronismo]()
 </p>
 </details>
 </div>
@@ -63,7 +70,15 @@
 <details><summary><b>React</b></summary>
 <p>
 
-* [React](./Doc/JavaScript.md)
+* [create-react-app]()
+* [JSX]()
+* [Eventos]()
+* [Componentes]()
+* [Props]()
+* [Estados]()
+* [Ciclo de vida]()
+* [Renderizado Condicional]()
+* [Hooks Básicos]()
 </p>
 </details>
 </div>
@@ -76,4 +91,28 @@
 </p>
 </details>
 </div>
+<div>
+<details><summary><b>Testing</b></summary>
+<p>
+
+* [Jest]()
+
+</p>
+</details>
 </div>
+</div>
+
+
+# 🎥 Videos Recomendados:
+
+[Javascript Import & Exports](https://youtu.be/0t-Le4kdaMg)
+[Curso de Mongodb](https://youtu.be/lWMemPN9t6Q)
+[Github Pages npm](https://youtu.be/G2FoSpsq3Rw)
+[Mongodb Visual Studio Code](https://youtu.be/fZgJHJO81dw)
+[Mongoose](https://youtu.be/gfP3aqV38q4)
+[Curso de Nodejs](https://youtu.be/BhvLIzVL8_o)
+[Thunder Client](https://youtu.be/HZx5X3s_Jl4)
+[Variables de Entorno en Nodejs](https://youtu.be/U6st9-lNUyY)
+[Curso de Git](https://youtu.be/HiXLkL42tMU)
+[Rest client VSCode](https://youtu.be/3QLcHjNp-08)
+[Mongodb Atlas](https://youtu.be/Imwk0HtEuGY)

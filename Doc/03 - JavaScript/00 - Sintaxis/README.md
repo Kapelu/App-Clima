@@ -6,6 +6,9 @@ const Kapelu = {
    github: 'https://github.com/Kapelu'
 }
 ```
+<h1 align="center"> SINTAXIS </h3>
+
+[HOME](../README.md)
 
 La sintaxis de un lenguaje de programación se define como el conjunto de reglas que deben seguirse al escribir el código fuente de los programas para considerarse como correctos para ese lenguaje de programación.
 
@@ -400,3 +403,6 @@ Los comentarios multilínea se definen encerrando el texto del comentario entre 
     ```
     
     En este **[ejemplo](http://latentflip.com/loupe/?code=CgpmdW5jdGlvbiBzYWx1ZGFyTWFzVGFyZGUoKXsKCXZhciBzYWx1ZG8gPSAnSG9sYSc7CgoJc2V0VGltZW91dCggZnVuY3Rpb24oKXsKCQljb25zb2xlLmxvZyhzYWx1ZG8pOwoJfSwzMDAwKQp9OwoKc2FsdWRhck1hc1RhcmRlKCk7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)**, el proceso es el siguiente. Primero se ejecuta la función **saludarMasTarde**, y luego, cuando se ejecuta el **setTimeout**, se lo envía al Web Apis. Cuando termina de procesarse y de transcurrirse el tiempo, se lo envía a el **Callback Queue**. Durante todo este tiempo, JavaScript sigue ejecutando el código hasta terminarlo. Una vez terminado, recibe la función del Callback Queue.
+
+
+    [HOME](../README.md)
