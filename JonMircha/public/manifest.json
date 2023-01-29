@@ -1,6 +1,6 @@
 {
-  "name": "PSA Dip App",
-  "short_name": "PSA Dip",
+  "name": "Curso de React",
+  "short_name": "course React",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#2f7ef3e8",
