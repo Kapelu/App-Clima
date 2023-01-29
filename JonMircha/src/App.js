@@ -3,6 +3,7 @@ import './App.css'
 import Componente from './components/Componente'
 import Propiedades from './components/Propiedades'
 import Estado from './components/Estado'
+import RenderizadoCondicional from './components/RenderizadoCondicional'
 
 function App() {
 	return (
@@ -11,6 +12,10 @@ function App() {
 				<header className='App-header'>
 					<section>
 						<img src={logo} className='App-logo' alt='logo' />
+						<section>
+						<h1>Curso de React</h1>
+						<p>Jon Mircha</p>
+						</section>
 					</section>
 					<section>
 						<Componente msg='Hola soy un componente Funcional Expresado desde una prop' />
@@ -26,6 +31,8 @@ function App() {
 						/>
 						<hr />
 						<Estado />
+						<hr />
+						<RenderizadoCondicional />
 					</section>
 				</header>
 			</div>
