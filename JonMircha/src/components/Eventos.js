@@ -49,16 +49,16 @@ export class EventosES7 extends Component {
 
 	//Arrow  functions
 	sumar = (e) => {
-		console.log('Sumando')
-		console.log(this)
+		//console.log('Sumando')
+		//console.log(this)
 		this.setState({
 			contador: this.state.contador + 1,
 		})
 	}
 
 	restar = (e) => {
-		console.log('Restar')
-		console.log(this)
+		//console.log('Restar')
+		//console.log(this)
 		this.setState({
 			contador: this.state.contador - 1,
 		})
