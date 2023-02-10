@@ -7,10 +7,10 @@ import RenderizadoCondicional from './components/RenderizadoCondicional'
 import RenderizadoElementos from './components/RenderizadoElementos'
 import ComunicacionComponentes from './components/ComunicacionComponentes'
 import CicloVida from './components/CicloVida'
-import AjaxApis from './components/AjaxApi' */
+import AjaxApis from './components/AjaxApi'
 import {EventosES6, EventosES7,} from './components/Eventos'
 import ContadorHooks from './components/ContadorHooks'
-import ScrollHooks from './components/ScrollHooks'
+import ScrollHooks from './components/ScrollHooks' */
 
 function App() {
 	return (
@@ -25,8 +25,7 @@ function App() {
 						</section>
 					</section>
 
-					<section>
-						{/* 
+					<section>{/* 
 						<Componente msg='Hola soy un componente Funcional Expresado desde una prop' />
 						<hr />
 						<Propiedades
@@ -46,22 +45,23 @@ function App() {
 						<RenderizadoCondicional />
 						<hr />
 						<RenderizadoElementos />
-						<hr />*/}
+						<hr />
 						<EventosES6 />
 						<hr />
 						<EventosES7 />
-						{/*<hr />
+						<hr />
 						<MasSobreEventos />
 						<hr />
 						<ComunicacionComponentes />
 						<hr />
 						<CicloVida />
 						<hr />
-						<AjaxApis /> */}
+						<AjaxApis />
 						<hr />
 						<ContadorHooks titulo='Seguidores'/>
 						<hr />
-						<ScrollHooks />
+						<ScrollHooks /> */}
+						<hr />
 					</section>
 				</header>
 			</div>
