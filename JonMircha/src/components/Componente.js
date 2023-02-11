@@ -4,11 +4,11 @@ import React from 'react'
 const Componente = props => <h2>{props.msg}</h2> // Retorno implicito
 
 //# Componente Funcional
-/*
-function Componente(props){
+
+/* function Componente(props){
     return <h2>{props.msg}</h2>
-}
-*/
+} */
+
 
 //# componete por clase
 /*

@@ -25,7 +25,8 @@ function App() {
 						</section>
 					</section>
 
-					<section>{/* 
+					<section>{
+					/* 
 						<Componente msg='Hola soy un componente Funcional Expresado desde una prop' />
 						<hr />
 						<Propiedades
