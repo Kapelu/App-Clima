@@ -11,6 +11,7 @@ import AjaxApis from './components/AjaxApi'
 import {EventosES6, EventosES7,} from './components/Eventos'
 import ContadorHooks from './components/ContadorHooks'
 import ScrollHooks from './components/ScrollHooks' */
+import RelojHooks from './components/RelojHooks'
 
 function App() {
 	return (
@@ -63,6 +64,9 @@ function App() {
 						<hr />
 						<ScrollHooks /> */}
 						<hr />
+						<RelojHooks />
+						<hr />
+						
 					</section>
 				</header>
 			</div>
