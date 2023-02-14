@@ -1,21 +1,15 @@
-import React from 'react'
+import React, { Component } from "react";
 
-//# conponente de una funcion no declarada, sino funcion expresada
-const Componente = props => <h2>{props.msg}</h2> // Retorno implicito
+const Componente = (props) => <h2>{props.msg}</h2>;
 
-//# Componente Funcional
-
-/* function Componente(props){
-    return <h2>{props.msg}</h2>
+/* function Componente(props) {
+  return <h2>{props.msg}</h2>;
 } */
 
+/* class Componente extends Component {
+  render() {
+    return <h2>{this.props.msg}</h2>;
+  }
+} */
 
-//# componete por clase
-/*
-class Componente extends Component{
-    render(){
-        return <h2>{this.props.msg}</h2>
-    }
-}
-*/
-export default Componente
+export default Componente;

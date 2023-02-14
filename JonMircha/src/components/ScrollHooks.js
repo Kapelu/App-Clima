@@ -1,36 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-export default function ScrollHooks (){
-    const [scrollY, setScrollY] = useState(0)
-    
-    
-    useEffect(()=>{
-        console.log('Fase de Montaje')
-    })
-    
-    useEffect(()=>{
-        console.log('Fase de actualización')
+export default function ScrollHooks() {
+  const [scrollY, setScrollY] = useState(0);
 
-        const detectarScroll = ()=> setScrollY(window.pageYOffset)
-        window.addEventListener('scroll', detectarScroll)
+  useEffect(() => {
+    //console.log("Moviendo el Scroll");
 
-        return ()=>{
-            window.removeEventListener('scroll', detectarScroll)
-        }
-    },[scrollY])
+    const detectarScroll = () => setScrollY(window.pageYOffset);
 
-    useEffect(()=>{
-        console.log('Fase de Desmontaje')
+    window.addEventListener("scroll", detectarScroll);
 
-        return ()=>{}
-    },[])
+    return () => {
+      window.removeEventListener("scroll", detectarScroll);
+      //console.log("Fase de Desmontaje");
+    };
+  }, [scrollY]);
 
-    useEffect(()=>{
-    })
-    return(
-        <>
-        <h2>Hooks - useEffect y el CicloVida</h2>
-        <p>Scroll Y del navegador {scrollY} px</p>
-        </>
-    )
+  useEffect(() => {
+    //console.log("Fase de Montaje");
+  }, []);
+
+  useEffect(() => {
+    //console.log("Fase de Actualización");
+  });
+
+  useEffect(() => {
+    return () => {
+      //console.log("Fase de Desmontaje");
+    };
+  });
+
+  return (
+    <>
+      <h2>Hooks - useEffect y el Ciclo de Vida</h2>
+      <p>Scroll Y del Navegador {scrollY}px</p>
+    </>
+  );
 }

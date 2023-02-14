@@ -10,8 +10,10 @@ import CicloVida from './components/CicloVida'
 import AjaxApis from './components/AjaxApi'
 import {EventosES6, EventosES7,} from './components/Eventos'
 import ContadorHooks from './components/ContadorHooks'
-import ScrollHooks from './components/ScrollHooks' */
+import ScrollHooks from './components/ScrollHooks' 
 import RelojHooks from './components/RelojHooks'
+import AjaxHooks from './components/AjaxHooks'*/
+import HooksPersonalizados from './components/HooksPersonalizados'
 
 function App() {
 	return (
@@ -20,7 +22,7 @@ function App() {
 				<header className='App-header'>
 					<section>
 						<img src={logo} className='App-logo' alt='logo' />
-						<section>
+						<section className='titulo'>
 							<h1>Curso de React</h1>
 							<p>Jon Mircha</p>
 						</section>
@@ -62,11 +64,13 @@ function App() {
 						<hr />
 						<ContadorHooks titulo='Seguidores'/>
 						<hr />
-						<ScrollHooks /> */}
+						<ScrollHooks /> 
 						<hr />
 						<RelojHooks />
 						<hr />
-						
+						<AjaxHooks />*/}
+						<hr />
+						<HooksPersonalizados />
 					</section>
 				</header>
 			</div>
