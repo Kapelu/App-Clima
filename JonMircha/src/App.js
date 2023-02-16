@@ -12,8 +12,8 @@ import {EventosES6, EventosES7,} from './components/Eventos'
 import ContadorHooks from './components/ContadorHooks'
 import ScrollHooks from './components/ScrollHooks' 
 import RelojHooks from './components/RelojHooks'
-import AjaxHooks from './components/AjaxHooks'*/
-import HooksPersonalizados from './components/HooksPersonalizados'
+import AjaxHooks from './components/AjaxHooks'
+import HooksPersonalizados from './components/HooksPersonalizados'*/
 
 function App() {
 	return (
@@ -68,9 +68,12 @@ function App() {
 						<hr />
 						<RelojHooks />
 						<hr />
-						<AjaxHooks />*/}
+						<AjaxHooks />
 						<hr />
-						<HooksPersonalizados />
+						<HooksPersonalizados />*/}
+						<hr />
+						{/* Video 54 - Introducción y definicion de rutas */}
+						
 					</section>
 				</header>
 			</div>
