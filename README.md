@@ -1,4 +1,14 @@
-<img align='center' src="/code.png" min-width="200px" max-width="200px" width="900px" alt="kapelucito">
+<div align='center'>
+
+# Curso _React_
+
+En este repositorio encontrarás los recursos para seguir el [Curso de _React_](https://www.youtube.com/playlist?list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk) de [Jonathan MirCha](https://jonmircha.com/).
+
+- Notas sobre _React_ en mi _blog_ personal https://jonmircha.com/react
+<a href="https://www.youtube.com/playlist?list=PLvq-jIkSeTUZ5XcUw8fJPTBKEHEKPMTKk"><img src="./CursoReact.png" alt="YouTube - JonMircha" title="Logotipo de cdlibre" width="118" height="70"></a>
+
+</div>
+<img >
 <h1 align="center">Aprehender!!!</h1>
 
 Los conocimientos adquiridos a través del `aprender` se pueden olvidar con el tiempo ya que el individuo no lo internaliza, como el caso de que a los días no se recuerda la lección estudiada en la universidad, muy diferente con el `aprehender` ya que los conocimientos obtenidos jamás se olvidan, por ejemplo: el colocarse unos zapatos, o que string es una cadena de texto.
