@@ -17,7 +17,6 @@ function App() {
 					<section>
 						{/* Video 54 - Introducción y definicion de rutas */}
 						<hr />
-            
 					</section>
 				</header>
 			</div>
