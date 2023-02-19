@@ -17,7 +17,7 @@ function App() {
 					</section>
 
 					<section>
-						{/* Video 54 - Introducción y definicion de rutas */}
+						{/* Video 53 - Introducción y definicion de rutas */}
 						<hr />
 					</section>
 				</header>
