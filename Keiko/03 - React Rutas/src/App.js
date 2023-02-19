@@ -1,5 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
+import ConceptosBasicos from './components/ConceptosBasicos'
 
 function App() {
 	return (
@@ -11,14 +12,14 @@ function App() {
 						<section className='titulo'>
 							<h1>Curso de React</h1>
 							<p>Jon Mircha - React Route</p>
-							<hr />
-							<a href='https://reactrouter.com' target='_blank' rel='noreferrer'>Documentacion</a>
+							<a href='https://reactrouter.com' target='_blank' rel='noreferrer'>Documentacion de React Route</a>
 						</section>
 					</section>
 
 					<section>
 						{/* Video 53 - Introducción y definicion de rutas */}
 						<hr />
+						<ConceptosBasicos />
 					</section>
 				</header>
 			</div>
