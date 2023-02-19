@@ -1,5 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
+import ConceptosBasicos from './components/ConceptosBasicos'
 
 function App() {
 	return (
@@ -18,7 +19,7 @@ function App() {
 					<section>
 						{/* Video 53 - Introducción y definicion de rutas */}
 						<hr />
-						
+						<ConceptosBasicos />
 					</section>
 				</header>
 			</div>
