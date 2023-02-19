@@ -16,6 +16,9 @@
 .titulo{
   color: rgba(5, 205, 255, 0.911);
 }
+a {
+  color: rgba(5, 205, 255, 0.911);
+}
 
 section{
   color: rgba(160, 155, 94, 0.966);

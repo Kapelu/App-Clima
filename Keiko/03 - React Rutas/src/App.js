@@ -11,6 +11,8 @@ function App() {
 						<section className='titulo'>
 							<h1>Curso de React</h1>
 							<p>Jon Mircha - React Route</p>
+							<hr />
+							<a href='https://reactrouter.com' target='_blank' rel='noreferrer'>Documentacion</a>
 						</section>
 					</section>
 
@@ -23,5 +25,16 @@ function App() {
 		</>
 	)
 }
+
+
+
+
+
+
+
+
+
+
+
 
 export default App
