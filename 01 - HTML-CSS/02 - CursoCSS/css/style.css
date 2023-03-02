@@ -1,0 +1,14 @@
+/*$ Esto es un comentario en css */
+/* 
+* Regla CSS consta de 2 partes
+1 - El selector
+2 - Bloque de declaraciones: {
+    atributos: valor;
+    atributos-de-mas-de-dos-palabras: valor;
+    }
+*/
+
+h1{
+    color:orange;
+    background-color: black;
+}
