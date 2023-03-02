@@ -12,9 +12,9 @@
 > ### más sobre [_HTML_](https://htmlreference.io/)
 > ### Documentacion sobre [_CSS_](https://developer.mozilla.org/es/docs/Learn/CSS)
 ### más sobre [_CSS_](https://cssreference.io/)
+
 <br>
 
 > ### Repositorio seguir el de [`Curso de HTML & CSS`](https://github.com/jonmircha/youtube-html-css)
 
 </div>
-
