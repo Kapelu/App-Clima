@@ -1,5 +1,10 @@
+:root{
+	--color-primario: #2c434d;
+	--color-secundario:#ddd0c2;
+}
 * {
 	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 }
 
 body {
@@ -7,24 +12,26 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #2a3d45;
+	background-color: var(--color-primario);
 }
 
 .contaier {
-	background-color: #ddc9b4;
-	padding: 20px;
-	color: #2a3d45;
+	background-color: var(--color-secundario);
+	padding: .4rem;
+	color: var(--color-primario);
 	display: flex;
 	display: none;
+	border-radius: 1rem;
 }
 
 .contaier > .block {
-	padding: 20px;
+	padding: 1rem;
+	border-radius: 1rem;
 }
 
 .block:first-child {
-	background-color: #2a3d45;
-	color: #ddc9b4;
+	background-color: var(--color-primario);
+	color: var(--color-secundario);
 }
 
 .information-container {
@@ -38,7 +45,7 @@ body {
 
 #location {
 	font-weight: bold;
-	font-size: 22px;
+	font-size: 1.5rem;
 }
 
 .loader,
@@ -47,7 +54,7 @@ body {
 	border-radius: 50%;
 }
 .loader {
-	color: #ddc9b4;
+	color: var(--color-secundario);
 	font-size: 11px;
 	text-indent: -99999em;
 	position: relative;
@@ -66,7 +73,7 @@ body {
 .loader:before {
 	width: 5.2em;
 	height: 10.2em;
-	background: #2a3d45;
+	background: var(--color-primario);
 	border-radius: 10.2em 0 0 10.2em;
 	top: -0.1em;
 	left: -0.1em;
@@ -78,7 +85,7 @@ body {
 .loader:after {
 	width: 5.2em;
 	height: 10.2em;
-	background: #2a3d45;
+	background: --color-primario;
 	border-radius: 0 10.2em 10.2em 0;
 	top: -0.1em;
 	left: 4.9em;
