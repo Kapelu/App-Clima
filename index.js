@@ -12,7 +12,7 @@ const APP_ID = '2022357613a97c7d9512d4abfc18ec24'
 const fetchData = (position) => {
 	const {latitude, longitude} = position.coords
 	fetch(
-		`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=es&appid=${APP_ID}`
+		`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${APP_ID}`
 	)
 		.then((response) => response.json())
 		.then((data) => setWeatherData(data))

@@ -29,6 +29,7 @@ body {
 
 .information-container {
 	display: flex;
+    align-items: center;
 }
 
 .information {
