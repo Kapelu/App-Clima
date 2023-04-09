@@ -1,46 +1,52 @@
-const APP_ID = '4090239d69cdb3874de692fd18539299';
+const APP_ID = '4090239d69cdb3874de692fd18539299'
 
-const fetchData = position => {
-    const { latitude, longitude } = position.coords;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${APP_ID}`)
-        .then(response => response.json())
-        .then(data => setWeatherData(data));
+const fetchData = (position) => {
+	const {latitude, longitude} = position.coords
+	fetch(
+		`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=sp-es&appid=${APP_ID}`
+	)
+		.then((response) => response.json())
+		.then((data) => setWeatherData(data))
 }
 
-const setWeatherData = data => {
-    const weatherData = {
-        location: data.name,
-        description: data.weather[0].main,
-        humidity: data.main.humidity,
-        pressure: data.main.pressure,
-        temperature: Math.floor(data.main.temp),
-        date: getDate(),
-    }
+const setWeatherData = (data) => {
+	const weatherData = {
+		location: data.name,
+		description: data.weather[0].main,
+		humidity: data.main.humidity,
+		pressure: data.main.pressure,
+		temperature: Math.floor(data.main.temp),
+		date: getDate(),
+	}
 
-    Object.keys(weatherData).forEach( key => {
-        setTextContent(key, weatherData[key]);
-    });
+	Object.keys(weatherData).forEach((key) => {
+		setTextContent(key, weatherData[key])
+	})
 
-    cleanUp();
+	cleanUp()
 }
 
 const cleanUp = () => {
-    let container = document.getElementById('container');
-    let loader = document.getElementById('loader');
+	let container = document.getElementById('container')
+	let loader = document.getElementById('loader')
 
-    loader.style.display = 'none'; 
-    container.style.display = 'flex'; 
+	loader.style.display = 'none'
+	container.style.display = 'flex'
 }
 
 const getDate = () => {
-    let date = new Date();
-    return `${date.getDate()}-${ ('0' + (date.getMonth() + 1)).slice(-2)}-${date.getFullYear()}`;
+	let date = new Date()
+	return `${('0' + (date.getDate())).slice(
+		-2
+	)}-${('0' + (date.getMonth() + 1)).slice(
+		-2
+	)}-${date.getFullYear()}`
 }
 
 const setTextContent = (element, text) => {
-    document.getElementById(element).textContent = text;
+	document.getElementById(element).textContent = text
 }
 
 const onLoad = () => {
-    navigator.geolocation.getCurrentPosition(fetchData)
+	navigator.geolocation.getCurrentPosition(fetchData)
 }
