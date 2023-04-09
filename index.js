@@ -1,3 +1,7 @@
+const onLoad = () => {
+	navigator.geolocation.getCurrentPosition(fetchData)
+}
+
 const APP_ID = '4090239d69cdb3874de692fd18539299'
 
 const fetchData = (position) => {
@@ -45,8 +49,4 @@ const getDate = () => {
 
 const setTextContent = (element, text) => {
 	document.getElementById(element).textContent = text
-}
-
-const onLoad = () => {
-	navigator.geolocation.getCurrentPosition(fetchData)
 }
